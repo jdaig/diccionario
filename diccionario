@@ -1,0 +1,21 @@
+loop do
+
+puts "Este es tu diccionario!."
+puts "Que deseas hacer?"
+puts "> Escribe 'add' para agregar tu palabra."
+puts "> Escribe 'delete' para borrar."
+puts "> Escribe 'exit' para salir."
+
+action=gets.chomp
+case action
+diccionario=[]
+when 'add'
+  puts "Agrega tu palabra: "
+  diccionario.push(gets.chomp)
+when 'delete'
+  puts "Que palabra vas a eliminar? "
+  diccionario.delete(gets.chomp) if diccionario.include?(gets.chomp)
+when 'exit'
+  break
+end
+end
